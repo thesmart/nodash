@@ -5,23 +5,23 @@ import { toString } from "../lang/toString.ts"
  * Converts the first character of `string` to upper case or lower case.
  *
  * @private
- * @param {string} value
+ * @param {string} string
  * @param {string} methodName The name of the `String` case method to use.
  */
-export function caseFirst(value: string, methodName: "toLowerCase" | "toUpperCase") {
-  value = toString(value);
+export function caseFirst(string: string, methodName: "toLowerCase" | "toUpperCase") {
+  string = toString(string);
 
-  const strSymbols = hasUnicodeWord(value)
-    ? stringToArray(value)
+  const strSymbols = hasUnicodeWord(string)
+    ? stringToArray(string)
     : undefined;
 
   const chr = strSymbols
     ? strSymbols[0]
-    : value.charAt(0);
+    : string.charAt(0);
 
   const trailing = strSymbols
     ? Array.prototype.slice.call(strSymbols, 1).join('')
-    : value.slice(1);
+    : string.slice(1);
 
   return chr[methodName]() + trailing;
 }

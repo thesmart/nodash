@@ -149,7 +149,7 @@ export function stringToArray(string: string): string[] | null {
  *
  * @since 3.0.0
  * @category String
- * @param {string} [value=''] The string to inspect.
+ * @param {string} [string=''] The string to inspect.
  * @param {RegExp|string|index} [pattern] The pattern to match words.
  * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
  * @returns {Array} Returns the words of `string`.
@@ -161,14 +161,14 @@ export function stringToArray(string: string): string[] | null {
  * _.words('fred, barney, & pebbles', /[^, ]+/g);
  * // => ['fred', 'barney', '&', 'pebbles']
  */
-export function words(value: string, pattern?: RegExp | string): string[];
-export function words(value: string, index?: number): string[]; // for `map` and `forEach`
-export function words(value: string, patternOrIndex?: RegExp | string | number): string[] {
-  value = toString(value)
+export function words(string: string, pattern?: RegExp | string): string[];
+export function words(string: string, index?: number): string[]; // for `map` and `forEach`
+export function words(string: string, patternOrIndex?: RegExp | string | number): string[] {
+  string = toString(string)
   const pattern = isNumber(patternOrIndex) ? undefined : patternOrIndex
   if (pattern === undefined) {
-    const result = hasUnicodeWord(value) ? unicodeWords(value) : asciiWords(value)
+    const result = hasUnicodeWord(string) ? unicodeWords(string) : asciiWords(string)
     return result || []
   }
-  return value.match(pattern as RegExp | string) || []
+  return string.match(pattern as RegExp | string) || []
 }

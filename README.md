@@ -30,11 +30,11 @@ Project status:
    - [ ] `unset`
  - [ ] **String**
    - [x] `deburr`
-   - [ ] `camelCase`
+   - [x] `camelCase`
    - [ ] `capitalize`
-   - [ ] `kebabCase`
-   - [ ] `snakeCase`
-   - [ ] `words`
+   - [x] `kebabCase`
+   - [x] `snakeCase`
+   - [x] `words`
 
 ## Installation
 

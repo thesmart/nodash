@@ -1,5 +1,8 @@
 import { assertStrictEquals } from "../test_deps.ts"
 import { camelCase } from "./camelCase.ts"
+import { testCaseMethods } from "./_caseMethodsTests.ts"
+
+testCaseMethods(camelCase)
 
 Deno.test('should work with numbers', function() {
   assertStrictEquals(camelCase('12 feet'), '12Feet');
