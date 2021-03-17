@@ -33,7 +33,9 @@ Project status:
    - [x] `camelCase`
    - [ ] `capitalize`
    - [x] `kebabCase`
+   - [x] `lowerCase`
    - [x] `snakeCase`
+   - [x] `upperCase`
    - [x] `words`
 
 ## Installation
