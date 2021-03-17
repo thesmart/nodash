@@ -6,7 +6,7 @@ import { isUndefined } from "../lang/isUndefined.ts"
  * Gets the value at `path` of `object`. If the resolved value is
  * `undefined`, the `defaultValue` is returned in its place.
  *
- * NOTE: this is modified from lodash, path may not be an array.
+ * **Note:** This is modified from lodash, path may not be an array.
  *
  * @category Object
  * @param {Object} object The object to query.

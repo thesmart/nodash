@@ -6,7 +6,7 @@ import { isArguments } from "../lang/isArguments.ts"
 /**
  * Checks if `path` is a direct property of `object`.
  *
- * NOTE: this is modified from lodash, path may not be an array.
+ * **Note:** This is modified from lodash, path may not be an array.
  *
  * @category Object
  * @param {Object} object The object to query.
