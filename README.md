@@ -14,10 +14,10 @@ Project goals:
 
 Project status:
  - [x] Complete `lang` port of all "is" functions (e.g. `isString`, `isEmpty`, etc.)
- - [ ] Partial `lang` port of "to" functions:
-   - `toFinite`, `toInteger`, `toKey`, `toNumber`, `toSafeInteger`, `toString`
+ - [x] Partial `lang` port of "to" functions:
+   - `toFinite`, `toInteger`, `toNumber`, `toSafeInteger`, `toString`
  - [ ] Function `debounce` and `throttle`
- - [ ] Object `get`, `has`, `set`, `unset`, `pick` and `omit`
+ - [ ] Object `get`, `has`, `set`, `unset`
  - [ ] String `camelCase`, `capitalize`, `kebabCase`, and `snakeCase`
 
 ## Installation
