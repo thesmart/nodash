@@ -35,6 +35,7 @@ Project status:
    - [x] `kebabCase`
    - [x] `lowerCase`
    - [x] `snakeCase`
+   - [x] `startCase`
    - [x] `upperCase`
    - [x] `words`
 
