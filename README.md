@@ -13,12 +13,28 @@ Project goals:
  * mostly complete port of lodash tests
 
 Project status:
- - [x] Complete `lang` port of all "is" functions (e.g. `isString`, `isEmpty`, etc.)
- - [x] Partial `lang` port of "to" functions:
-   - `toFinite`, `toInteger`, `toNumber`, `toSafeInteger`, `toString`
- - [ ] Function `debounce` and `throttle`
- - [ ] Object `get`, `has`, `set`, `unset`
- - [ ] String `camelCase`, `capitalize`, `kebabCase`, and `snakeCase`
+ - [x] Partial **Lang** port of all "is" functions (e.g. `isString`, `isEmpty`, etc.)
+ - [x] Partial **Lang** port of "to" functions:
+   - [x] `toFinite`
+   - [x] `toInteger`
+   - [x] `toNumber`
+   - [x] `toSafeInteger`
+   - [x] `toString`
+ - [ ] **Function**
+   - [ ] `debounce`
+   - [ ] `throttle`
+ - [ ] **Object**
+   - [x] `get`
+   - [x] `has`
+   - [ ] `set`
+   - [ ] `unset`
+ - [ ] **String**
+   - [x] `deburr`
+   - [ ] `camelCase`
+   - [ ] `capitalize`
+   - [ ] `kebabCase`
+   - [ ] `snakeCase`
+   - [ ] `words`
 
 ## Installation
 
