@@ -1,5 +1,5 @@
-import { comboMarks, deburr, deburredLetters } from "./deburr.ts"
-import { assertEquals } from "../test_deps.ts"
+import { deburr, deburredLetters } from "./deburr.ts"
+import { assertEquals, comboMarks } from "../test_deps.ts"
 
 Deno.test('should convert Latin Unicode letters to basic Latin', function() {
   const actual = Object.keys(deburredLetters).map(deburr);
