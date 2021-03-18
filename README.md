@@ -18,7 +18,6 @@ for the Deno JavaScript runtime.
   exists
 - `get`, `has`, etc. no longer take `path: Array<string|symbol>`, only
   `path: string`
-- `toPath` is now private (not exported)
 - private function `_caseFirst` has a different signature
 
 ## Usage
@@ -67,8 +66,6 @@ import * as _ from "https://deno.land/x/nodash/src/mod.ts";
   - [x] `startCase`
   - [x] `upperCase`
   - [x] `words`
-- [ ] **Util**
-  - [ ] `times`
 
 ## Contributions
 
