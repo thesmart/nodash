@@ -9,6 +9,7 @@ import { isUndefined } from "./isUndefined.ts";
  * global [`isNaN`](https://mdn.io/isNaN) which returns `true` for
  * `undefined` and other non-number values.
  *
+ * @export
  * @since 0.1.0
  * @category Lang
  * @param {*} value The value to check.

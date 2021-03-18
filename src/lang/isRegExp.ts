@@ -5,6 +5,7 @@ import { regexpTag } from "./consts.ts";
 /**
  * Is value a RegExp instance?
  *
+ * @export
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is a regexp, else `false`.
  */

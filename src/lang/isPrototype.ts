@@ -6,6 +6,7 @@ const objectProto = Object.prototype;
 /**
  * Checks if `value` is likely a prototype object.
  *
+ * @export
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
  */

@@ -40,6 +40,7 @@ export interface DebouncedFunction<A extends Array<unknown>, R>
  * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
  * for details over the differences between `debounce` and `throttle`.
  *
+ * @export
  * @since 0.1.0
  * @category Function
  * @param {Function} func The function to debounce.

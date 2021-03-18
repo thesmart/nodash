@@ -1,8 +1,7 @@
-// Function
+// function submodule
 export { debounce } from "./function/debounce.ts";
 export { throttle } from "./function/throttle.ts";
-// Lang
-export { getTag } from "./lang/getTag.ts";
+// lang submodule
 export { isArguments } from "./lang/isArguments.ts";
 export { isArray } from "./lang/isArray.ts";
 export { isArrayLike } from "./lang/isArrayLike.ts";
@@ -24,6 +23,7 @@ export { isObjectLike } from "./lang/isObjectLike.ts";
 export { isPlainObject } from "./lang/isPlainObject.ts";
 export { isPrototype } from "./lang/isPrototype.ts";
 export { isRegExp } from "./lang/isRegExp.ts";
+export { isSafeInteger } from "./lang/isSafeInteger.ts";
 export { isSet } from "./lang/isSet.ts";
 export { isString } from "./lang/isString.ts";
 export { isSymbol } from "./lang/isSymbol.ts";
@@ -36,17 +36,17 @@ export { toInteger } from "./lang/toInteger.ts";
 export { toNumber } from "./lang/toNumber.ts";
 export { toSafeInteger } from "./lang/toSafeInteger.ts";
 export { toString } from "./lang/toString.ts";
-// Object
+// object submodule
 export { get } from "./object/get.ts";
 export { has } from "./object/has.ts";
-export { toPath } from "./object/toPath.ts";
-// String
-export { camelCase } from "./string/camelCase.ts";
+// string submodule
+export { camelCase  } from "./string/camelCase.ts";
 export { capitalize } from "./string/capitalize.ts";
 export { deburr } from "./string/deburr.ts";
-export { kebabCase } from "./string/kebabCase.ts";
+export { kebabCase  } from "./string/kebabCase.ts";
 export { lowerCase } from "./string/lowerCase.ts";
 export { snakeCase } from "./string/snakeCase.ts";
-export { startCase, titleCase } from "./string/startCase.ts";
+export { startCase } from "./string/startCase.ts";
+export { titleCase } from "./string/titleCase.ts";
 export { upperCase } from "./string/upperCase.ts";
 export { words } from "./string/words.ts";

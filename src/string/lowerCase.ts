@@ -4,6 +4,7 @@ import { toString } from "../lang/toString.ts";
 /**
  * Converts `string`, as space separated words, to lower case.
  *
+ * @export
  * @since 4.0.0
  * @category String
  * @param {string} [string=''] The string to convert.

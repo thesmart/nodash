@@ -6,6 +6,7 @@ import { toFinite } from "./toFinite.ts";
  * **Note:** This method is loosely based on
  * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
  *
+ * @export
  * @since 4.0.0
  * @category Lang
  * @param {*} value The value to convert.

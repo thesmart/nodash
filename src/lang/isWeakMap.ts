@@ -5,6 +5,7 @@ import { weakMapTag } from "./consts.ts";
 /**
  * Checks if `value` is classified as a `WeakMap` object.
  *
+ * @export
  * @since 4.3.0
  * @category Lang
  * @param {*} value The value to check.

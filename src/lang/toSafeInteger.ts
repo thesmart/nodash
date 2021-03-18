@@ -5,6 +5,7 @@ import { MAX_SAFE_INTEGER } from "./consts.ts";
  * Converts `value` to a safe integer. A safe integer can be compared and
  * represented correctly.
  *
+ * @export
  * @since 4.0.0
  * @category Lang
  * @param {*} value The value to convert.

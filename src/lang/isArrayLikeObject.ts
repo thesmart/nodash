@@ -5,6 +5,7 @@ import { isArrayLike } from "./isArrayLike.ts";
  * This method is like `_.isArrayLike` except that it also checks if `value`
  * is an object.
  *
+ * @export
  * @since 4.0.0
  * @category Lang
  * @param {*} value The value to check.

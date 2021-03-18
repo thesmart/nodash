@@ -5,6 +5,7 @@ import { symbolTag } from "./consts.ts";
 /**
  * Checks if `value` is classified as a `Symbol` primitive or object.
  *
+ * @export
  * @since 4.0.0
  * @category Lang
  * @param {*} value The value to check.

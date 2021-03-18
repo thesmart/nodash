@@ -9,6 +9,7 @@ const objectCtorString = Function.prototype.toString.call(Object);
  * Checks if `value` is a plain object, that is, an object created by the
  * `Object` constructor or one with a `[[Prototype]]` of `null`.
  *
+ * @export
  * @since 0.8.0
  * @category Lang
  * @param {*} value The value to check.

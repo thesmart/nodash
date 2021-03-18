@@ -4,6 +4,7 @@ import { INFINITY, MAX_INTEGER } from "./consts.ts";
 /**
  * Converts `value` to a finite number.
  *
+ * @export
  * @since 4.12.0
  * @category Lang
  * @param {*} value The value to convert.

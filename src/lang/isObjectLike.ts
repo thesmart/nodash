@@ -2,6 +2,7 @@
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
  *
+ * @export
  * @since 4.0.0
  * @category Lang
  * @param {*} value The value to check.

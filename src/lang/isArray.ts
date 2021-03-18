@@ -1,6 +1,7 @@
 /**
  * Checks if `value` is classified as an `Array` object.
  *
+ * @export
  * @since 0.1.0
  * @category Lang
  * @param {*} value The value to check.
@@ -19,4 +20,6 @@
  * _.isArray(_.noop);
  * // => false
  */
-export const isArray = Array.isArray;
+export function isArray(value: unknown): boolean {
+  return Array.isArray(value);
+}

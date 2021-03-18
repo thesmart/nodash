@@ -8,6 +8,7 @@ import { MAX_SAFE_INTEGER } from "./consts.ts";
  * **Note:** This method is based on
  * [`Number.isSafeInteger`](https://mdn.io/Number/isSafeInteger).
  *
+ * @export
  * @since 4.0.0
  * @category Lang
  * @param {*} value The value to check.

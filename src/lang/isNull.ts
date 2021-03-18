@@ -1,6 +1,7 @@
 /**
  * Checks if `value` is `null`.
  *
+ * @export
  * @since 0.1.0
  * @category Lang
  * @param {*} value The value to check.

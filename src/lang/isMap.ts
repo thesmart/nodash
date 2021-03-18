@@ -5,6 +5,7 @@ import { isObjectLike } from "./isObjectLike.ts";
 /**
  * Checks if `value` is classified as a `Map` object.
  *
+ * @export
  * @since 4.3.0
  * @category Lang
  * @param {*} value The value to check.

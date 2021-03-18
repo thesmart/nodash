@@ -164,6 +164,7 @@ export function stringToArray(string: string): string[] | null {
  * **Note** - Change for lodash: added `index`
  *  signature to support `Array.map`, `Array.forEach` etc.
  *
+ * @export
  * @since 3.0.0
  * @category String
  * @param {string} [string=''] The string to inspect.

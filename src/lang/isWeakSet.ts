@@ -5,6 +5,7 @@ import { weakSetTag } from "./consts.ts";
 /**
  * Checks if `value` is classified as a `WeakSet` object.
  *
+ * @export
  * @since 4.3.0
  * @category Lang
  * @param {*} value The value to check.

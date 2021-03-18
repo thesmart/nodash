@@ -6,6 +6,7 @@ import { domExcTag, errorTag } from "./consts.ts";
  * Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
  * `SyntaxError`, `TypeError`, or `URIError` object.
  *
+ * @export
  * @since 3.0.0
  * @category Lang
  * @param {*} value The value to check.

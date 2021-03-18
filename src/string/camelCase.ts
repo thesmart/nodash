@@ -5,6 +5,7 @@ import { caseFirst } from "./_caseFirst.ts";
 /**
  * Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
  *
+ * @export
  * @since 3.0.0
  * @category String
  * @param {string} [string=''] The string to convert.
@@ -21,12 +22,12 @@ import { caseFirst } from "./_caseFirst.ts";
  * camelCase('__FOO_BAR__')
  * // => 'fooBar'
  */
-export const camelCase = (string: string): string => (
-  words(toString(string).replace(/['\u2019]/g, "")).reduce(
+export function camelCase (string: string): string {
+  return words(toString(string).replace(/['\u2019]/g, "")).reduce(
     (result, word, index) => {
       word = word.toLowerCase();
       return result + (index ? caseFirst(word, "toUpperCase") : word);
     },
     "",
-  )
-);
+  );
+}

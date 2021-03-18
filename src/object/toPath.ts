@@ -6,6 +6,9 @@ import { toString } from "../lang/toString.ts";
 /**
  * Converts `value` to a property path array.
  *
+ * ** Note ** - In lodash, this is not private. Made private here b/c `get`, `has`, etc. no longer take `Array<string|symbol>`.
+ *
+ * @private
  * @since 4.0.0
  * @category Util
  * @param {*} path The value to convert.

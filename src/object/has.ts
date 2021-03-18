@@ -8,6 +8,7 @@ import { isArguments } from "../lang/isArguments.ts";
  *
  * **Note:** This is modified from lodash, path may not be an array.
  *
+ * @export
  * @category Object
  * @param {Object} object The object to query.
  * @param {string} path The path to check.

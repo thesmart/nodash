@@ -8,6 +8,7 @@ import { numberTag } from "./consts.ts";
  * **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
  * classified as numbers, use the `Number.isFinite` method.
  *
+ * @export
  * @since 0.1.0
  * @category Lang
  * @param {*} value The value to check.

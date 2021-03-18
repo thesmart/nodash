@@ -5,6 +5,7 @@ import { argsTag } from "./consts.ts";
 /**
  * Checks if `value` is likely an `arguments` object.
  *
+ * @export
  * @since 0.1.0
  * @category Lang
  * @param {*} value The value to check.

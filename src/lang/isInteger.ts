@@ -6,6 +6,7 @@ import { toInteger } from "./toInteger.ts";
  * **Note:** This method is based on
  * [`Number.isInteger`](https://mdn.io/Number/isInteger).
  *
+ * @export
  * @since 4.0.0
  * @category Lang
  * @param {*} value The value to check.

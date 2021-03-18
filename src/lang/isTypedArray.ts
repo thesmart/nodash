@@ -23,6 +23,7 @@ typedArrayTags[tags.argsTag] = typedArrayTags[tags.arrayTag] =
 /**
  * Checks if `value` is classified as a typed array.
  *
+ * @export
  * @since 3.0.0
  * @category Lang
  * @param {*} value The value to check.

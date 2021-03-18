@@ -5,6 +5,7 @@ import { toString } from "../lang/toString.ts";
  * Converts `string` to
  * [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
  *
+ * @export
  * @since 3.0.0
  * @category String
  * @param {string} [string=''] The string to convert.
@@ -21,11 +22,11 @@ import { toString } from "../lang/toString.ts";
  * kebabCase('__FOO_BAR__')
  * // => 'foo-bar'
  */
-export const kebabCase = (string: string) => (
-  words(toString(string).replace(/['\u2019]/g, "")).reduce(
+export function kebabCase (string: string): string {
+  return words(toString(string).replace(/['\u2019]/g, "")).reduce(
     (result, word, index) => (
       result + (index ? "-" : "") + word.toLowerCase()
     ),
     "",
-  )
-);
+  );
+}

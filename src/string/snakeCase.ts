@@ -5,6 +5,7 @@ import { words } from "./words.ts";
  * Converts `string` to
  * [snake case](https://en.wikipedia.org/wiki/Snake_case).
  *
+ * @export
  * @since 3.0.0
  * @category String
  * @param {string} [string=''] The string to convert.
