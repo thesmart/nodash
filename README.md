@@ -20,18 +20,18 @@ Project status:
    - [x] `toNumber`
    - [x] `toSafeInteger`
    - [x] `toString`
- - [ ] **Function**
+ - [x] **Function**
    - [x] `debounce`
-   - [ ] `throttle`
+   - [x] `throttle`
  - [ ] **Object**
    - [x] `get`
    - [x] `has`
    - [ ] `set`
    - [ ] `unset`
- - [ ] **String**
+ - [x] **String**
    - [x] `deburr`
    - [x] `camelCase`
-   - [ ] `capitalize`
+   - [x] `capitalize`
    - [x] `kebabCase`
    - [x] `lowerCase`
    - [x] `snakeCase`
