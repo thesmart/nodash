@@ -22,7 +22,7 @@ import { caseFirst } from "./_caseFirst.ts";
  * camelCase('__FOO_BAR__')
  * // => 'fooBar'
  */
-export function camelCase (string: string): string {
+export function camelCase(string: string): string {
   return words(toString(string).replace(/['\u2019]/g, "")).reduce(
     (result, word, index) => {
       word = word.toLowerCase();

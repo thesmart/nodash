@@ -1,4 +1,4 @@
-import { startCase } from "./startCase.ts"
+import { startCase } from "./startCase.ts";
 
 /**
  * Same as `startCase()`, converts `string` to

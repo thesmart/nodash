@@ -22,7 +22,7 @@ import { toString } from "../lang/toString.ts";
  * kebabCase('__FOO_BAR__')
  * // => 'foo-bar'
  */
-export function kebabCase (string: string): string {
+export function kebabCase(string: string): string {
   return words(toString(string).replace(/['\u2019]/g, "")).reduce(
     (result, word, index) => (
       result + (index ? "-" : "") + word.toLowerCase()

@@ -8,7 +8,9 @@ interface DebounceOptions {
   trailing?: boolean;
 }
 
-export type DebouncableFunction<A extends Array<unknown>, R> = (...args: A) => R;
+export type DebouncableFunction<A extends Array<unknown>, R> = (
+  ...args: A
+) => R;
 export interface DebouncedFunction<A extends Array<unknown>, R>
   extends DebouncableFunction<A, R> {
   cancel: () => void;

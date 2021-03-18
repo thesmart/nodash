@@ -1,6 +1,6 @@
 # nodash
 
-A partial port of [`lodash`](https://lodash.com/) and test suit to TypeScript 
+A partial port of [`lodash`](https://lodash.com/) and test suit to TypeScript
 for the Deno JavaScript runtime.
 
 **Project goals:**
@@ -14,8 +14,10 @@ for the Deno JavaScript runtime.
 
 **Changes from Lodash**
 
-- many public functions have been excluded if an equivalent ECMA 6 feature exists
-- `get`, `has`, etc. no longer take `path: Array<string|symbol>`, only `path: string`
+- many public functions have been excluded if an equivalent ECMA 6 feature
+  exists
+- `get`, `has`, etc. no longer take `path: Array<string|symbol>`, only
+  `path: string`
 - `toPath` is now private (not exported)
 - private function `_caseFirst` has a different signature
 
@@ -67,12 +69,13 @@ import * as _ from "https://deno.land/x/nodash/src/mod.ts";
   - [x] `words`
 - [ ] **Util**
   - [ ] `times`
-  
+
 ## Contributions
 
 ✨💎✨ Contributions are welcome. ✨💎✨
 
 For additional ports, please:
+
 1. open an issue w/ proposal
 2. open a PR w/ code contribution (linked to issue)
 3. include all relevant tests from lodash (ported)

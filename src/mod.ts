@@ -40,10 +40,10 @@ export { toString } from "./lang/toString.ts";
 export { get } from "./object/get.ts";
 export { has } from "./object/has.ts";
 // string submodule
-export { camelCase  } from "./string/camelCase.ts";
+export { camelCase } from "./string/camelCase.ts";
 export { capitalize } from "./string/capitalize.ts";
 export { deburr } from "./string/deburr.ts";
-export { kebabCase  } from "./string/kebabCase.ts";
+export { kebabCase } from "./string/kebabCase.ts";
 export { lowerCase } from "./string/lowerCase.ts";
 export { snakeCase } from "./string/snakeCase.ts";
 export { startCase } from "./string/startCase.ts";
