@@ -1,6 +1,6 @@
 # nodash
 
-A partial port of `[lodash](https://lodash.com/)` and test suit to TypeScript 
+A partial port of [`lodash`](https://lodash.com/) and test suit to TypeScript 
 for the Deno JavaScript runtime.
 
 **Project goals:**
