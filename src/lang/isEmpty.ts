@@ -59,7 +59,7 @@ export function isEmpty(value: unknown): boolean {
     return !(value as HasSize).size;
   }
   if (isPrototype(value)) {
-    return !Object.keys(value as object).length;
+    return !Object.keys(value as Record<string, unknown>).length;
   }
   for (const key in (value as Iterable<unknown>)) {
     if (hasOwnProperty.call(value, key)) {

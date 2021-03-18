@@ -21,7 +21,7 @@ Deno.test("should throttle a function", async () => {
   throttled();
   throttled();
 
-  let lastCount = callCount;
+  const lastCount = callCount;
   assertEquals(callCount > 0, true);
 
   await delay(64);

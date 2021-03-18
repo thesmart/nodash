@@ -34,7 +34,7 @@ Deno.test("should convert binary/octal strings to numbers", function () {
 
 Deno.test("should convert invalid binary/octal strings to 0", function () {
   const values = ["0b", "0o", "0x", "0b1010102", "0o123458", "0x1a2b3x"];
-  let actual = values.map((v) => toSafeInteger(v));
+  const actual = values.map((v) => toSafeInteger(v));
   assertEquals(actual, [0, 0, 0, 0, 0, 0]);
 });
 

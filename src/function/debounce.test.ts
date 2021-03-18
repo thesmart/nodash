@@ -148,7 +148,7 @@ Deno.test("subsequent leading debounced calls return the last `func` result", as
     "leading": true,
     "trailing": false,
   });
-  let results = [debounced("a"), debounced("b")];
+  const results = [debounced("a"), debounced("b")];
 
   assertEquals(results, ["a", "a"]);
 
@@ -330,10 +330,10 @@ Deno.test("should invoke the trailing call with the correct arguments and `this`
   // deno-lint-ignore no-explicit-any
   let actual: any[];
   let callCount = 0;
-  let object = {};
+  const object = {};
 
-  // deno-lint-ignore no-explicit-any
   const debounced = debounce(
+    // deno-lint-ignore no-explicit-any
     function (this: any, value) {
       actual = [this];
       Array.prototype.push.call(actual, ...arguments);

@@ -32,7 +32,7 @@ Deno.test("should convert binary/octal strings to numbers", function () {
 
 Deno.test("should convert invalid binary/octal strings to NaN", function () {
   const values = ["0b", "0o", "0x", "0b1010102", "0o123458", "0x1a2b3x"];
-  let actual = values.map((v) => toNumber(v));
+  const actual = values.map((v) => toNumber(v));
   assertEquals(actual, [NaN, NaN, NaN, NaN, NaN, NaN]);
 });
 

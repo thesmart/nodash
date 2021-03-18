@@ -2,6 +2,7 @@ import { toString } from "../lang/toString.ts";
 import { isNumber } from "../lang/isNumber.ts";
 
 /** Used to match words composed of alphanumeric characters. */
+// deno-lint-ignore no-control-regex
 export const reAsciiWord = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
 
 /** Used to detect strings that need a more robust regexp to match words. */

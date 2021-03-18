@@ -8,10 +8,8 @@ interface DebounceOptions {
   trailing?: boolean;
 }
 
-// deno-lint-ignore no-explicit-any
-export type DebouncableFunction<A extends Array<any>, R> = (...args: A) => R;
-// deno-lint-ignore no-explicit-any
-export interface DebouncedFunction<A extends Array<any>, R>
+export type DebouncableFunction<A extends Array<unknown>, R> = (...args: A) => R;
+export interface DebouncedFunction<A extends Array<unknown>, R>
   extends DebouncableFunction<A, R> {
   cancel: () => void;
   flush: () => void;
@@ -78,25 +76,25 @@ export interface DebouncedFunction<A extends Array<any>, R>
  * // Check for pending invocations.
  * const status = debounced.pending() ? "Pending..." : "Ready"
  */
-export function debounce<A extends Array<any>, R>(
+export function debounce<A extends Array<unknown>, R>(
   func: DebouncableFunction<A, R>,
-  wait: number = 0,
+  wait = 0,
   options: DebounceOptions = {},
 ): DebouncedFunction<A, R> {
   // deno-lint-ignore no-explicit-any
   let lastArgs: any;
   // deno-lint-ignore no-explicit-any
   let lastThis: any;
-  let maxWait: number = 0;
+  let maxWait = 0;
   // deno-lint-ignore no-explicit-any
   let result: any;
   let timerId: number | undefined;
   let lastCallTime: number | undefined;
 
-  let lastInvokeTime: number = 0;
-  let leading: boolean = false;
-  let maxing: boolean = false;
-  let trailing: boolean = true;
+  let lastInvokeTime = 0;
+  let leading = false;
+  let maxing = false;
+  let trailing = true;
 
   if (!isFunction(func)) {
     throw new TypeError("Expected a function.");

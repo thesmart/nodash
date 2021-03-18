@@ -31,7 +31,7 @@ export const errors = [
   new TypeError(),
   new URIError(),
 ];
-export const typedArrays: Function[] = [
+export const typedArrays = [
   Float32Array,
   Float64Array,
   Int8Array,
@@ -42,6 +42,7 @@ export const typedArrays: Function[] = [
   Uint16Array,
   Uint32Array,
 ];
+// @ts-ignore: it's a test where type is non-important
 export const arrayViews = typedArrays.concat(DataView);
 
 /** List of combining diacritical marks. */

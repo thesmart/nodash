@@ -12,7 +12,7 @@ Deno.test("should convert a string to a path", () => {
 });
 
 Deno.test("should coerce array elements to strings", () => {
-  let array = ["a", "b", "c"];
+  const array = ["a", "b", "c"];
   for (const value of [array, array.map(Object)]) {
     const path = toPath(value);
     assertEquals(path, array);
@@ -25,8 +25,8 @@ Deno.test("should return new path array", () => {
 });
 
 Deno.test("should not coerce symbols to strings", () => {
-  let symbol = Symbol("a");
-  let object = Object(symbol);
+  const symbol = Symbol("a");
+  const object = Object(symbol);
   for (const value of [symbol, object, [symbol], [object]]) {
     const actual = toPath(value);
     assertEquals(

@@ -7,12 +7,12 @@ import { toString } from "../lang/toString.ts";
  *
  * @since 3.0.0
  * @category String
- * @param {string} [string=''] The string to capitalize.
+ * @param {string} [string=""] The string to capitalize.
  * @returns {string} Returns the capitalized string.
  * @example
  *
  * capitalize('FRED')
  * // => 'Fred'
  */
-export const capitalize = (string: string = "") =>
+export const capitalize = (string = "") =>
   caseFirst(toString(string).toLowerCase(), "toUpperCase");

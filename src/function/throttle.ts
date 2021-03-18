@@ -59,9 +59,9 @@ export interface ThrottleOptions {
  * // Cancel the trailing throttled invocation.
  * jQuery(window).on('popstate', throttled.cancel)
  */
-export function throttle<A extends Array<any>, R>(
+export function throttle<A extends Array<unknown>, R>(
   func: DebouncableFunction<A, R>,
-  wait: number = 0,
+  wait = 0,
   options: ThrottleOptions = {},
 ): DebouncedFunction<A, R> {
   let leading = true;

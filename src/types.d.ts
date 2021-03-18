@@ -24,14 +24,17 @@ interface IteratorReturnResult<TReturn> {
   value: TReturn;
 }
 
+// deno-lint-ignore no-explicit-any
 export type IteratorResult<T, TReturn = any> =
   | IteratorYieldResult<T>
   | IteratorReturnResult<TReturn>;
 
+// deno-lint-ignore no-explicit-any
 export interface Iterator<T, TReturn = any, TNext = undefined> {
   // NOTE: 'next' is defined using a tuple to ensure we report the correct assignability errors in all places.
   next(...args: [] | [TNext]): IteratorResult<T, TReturn>;
   return?(value?: TReturn): IteratorResult<T, TReturn>;
+  // deno-lint-ignore no-explicit-any
   throw?(e?: any): IteratorResult<T, TReturn>;
 }
 
