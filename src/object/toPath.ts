@@ -18,11 +18,11 @@ import { toString } from "../lang/toString.ts"
  * _.toPath('a[0].b.c');
  * // => ['a', '0', 'b', 'c']
  */
-export function toPath(path: string | string[]): Array<string> {
+export function toPath(path: string | symbol | ArrayLike<string | symbol>): Array<string | symbol> {
   if (isArrayLikeObject(path)) {
-    return Array.from(path, (pathKey) => {
-      return toString(pathKey);
+    return Array.from(path as ArrayLike<string | symbol>, (pathKey) => {
+      return isSymbol(pathKey) ? pathKey : toString(pathKey);
     })
   }
-  return stringToPath(toString(path))
+  return isSymbol(path) ? [path as symbol] : stringToPath(toString(path))
 }
