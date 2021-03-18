@@ -57,13 +57,13 @@ import {
   isEmpty,
   isNull,
   isUndefined,
-} from "https://deno.land/x/nodash@4.17.9/mod.ts";
+} from "https://deno.land/x/nodash/mod.ts";
 ```
 
 For the familiar:
 
 ```js
-import * as _ from "https://deno.land/x/nodash@4.17.9/mod.ts";
+import * as _ from "https://deno.land/x/nodash/mod.ts";
 ```
 
 ## Contributions
