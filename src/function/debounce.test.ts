@@ -2,10 +2,6 @@ import { debounce } from "./debounce.ts"
 import { assertEquals, assertNotEquals, assertStrictEquals } from "../test_deps.ts"
 import { delay } from "../test_deps.ts"
 
-async function fastLog(str: string) {
-  await Deno.stdout.write(new TextEncoder().encode(str));
-}
-
 /**
  * **Note** - If you see `AssertionError: Test case is leaking async
  *  ops.`, be sure to call `debounced.cancel()`
@@ -215,11 +211,11 @@ Deno.test('should support `maxWait` in a tight loop', async () => {
     withoutCount++;
   }, 96);
 
-  const start = +new Date;
+  const start = Date.now();
 
   await new Promise<void>((resolve) => {
     // @ts-ignore: it's a test where type is non-important
-    while ((new Date - start) < limit) {
+    while ((Date.now() - start) < limit) {
       withMaxWait();
       withoutMaxWait();
     }

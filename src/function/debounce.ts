@@ -9,9 +9,9 @@ interface DebounceOptions {
 }
 
 // deno-lint-ignore no-explicit-any
-type DebouncableFunction<A extends Array<any>, R> = (...args: A) => R;
+export type DebouncableFunction<A extends Array<any>, R> = (...args: A) => R;
 // deno-lint-ignore no-explicit-any
-interface DebouncedFunction<A extends Array<any>, R> extends DebouncableFunction<A, R> {
+export interface DebouncedFunction<A extends Array<any>, R> extends DebouncableFunction<A, R> {
   cancel: () => void
   flush: () => void
 }
