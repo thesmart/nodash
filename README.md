@@ -21,7 +21,7 @@ Project status:
    - [x] `toSafeInteger`
    - [x] `toString`
  - [ ] **Function**
-   - [ ] `debounce`
+   - [x] `debounce`
    - [ ] `throttle`
  - [ ] **Object**
    - [x] `get`

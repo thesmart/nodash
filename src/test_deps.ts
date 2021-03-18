@@ -14,7 +14,9 @@ export {
   assertObjectMatch,
   assertThrows,
   assertThrowsAsync
-} from "https://x.nest.land/std@0.89.0/testing/asserts.ts";
+} from "https://x.nest.land/std@0.90.0/testing/asserts.ts";
+
+export { delay } from "https://deno.land/std@0.90.0/async/mod.ts";
 
 export const booleans = [true, false];
 export const numbers = [0, INFINITY, -INFINITY, NaN]
