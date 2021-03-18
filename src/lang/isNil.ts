@@ -17,5 +17,5 @@
  * // => false
  */
 export function isNil(value: unknown): boolean {
-  return value == null
+  return value == null;
 }

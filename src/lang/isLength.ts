@@ -1,4 +1,4 @@
-import { MAX_SAFE_INTEGER } from './consts.ts'
+import { MAX_SAFE_INTEGER } from "./consts.ts";
 
 /**
  * Checks if `value` is a valid array-like length.
@@ -25,6 +25,6 @@ import { MAX_SAFE_INTEGER } from './consts.ts'
  * // => false
  */
 export function isLength(value: unknown): boolean {
-  return typeof value === 'number' &&
-    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER
+  return typeof value === "number" &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
 }

@@ -1,6 +1,6 @@
-import { getTag } from './getTag.ts'
-import { isObjectLike } from './isObjectLike.ts'
-import { boolTag } from "./consts.ts"
+import { getTag } from "./getTag.ts";
+import { isObjectLike } from "./isObjectLike.ts";
+import { boolTag } from "./consts.ts";
 
 /**
  * Checks if `value` is classified as a boolean primitive or object.
@@ -19,5 +19,5 @@ import { boolTag } from "./consts.ts"
  */
 export function isBoolean(value: unknown): boolean {
   return value === true || value === false ||
-    (isObjectLike(value) && getTag(value) == boolTag)
+    (isObjectLike(value) && getTag(value) == boolTag);
 }

@@ -1,5 +1,5 @@
-import { words } from "./words.ts"
-import { toString } from "../lang/toString.ts"
+import { words } from "./words.ts";
+import { toString } from "../lang/toString.ts";
 
 /**
  * Converts `string`, as space separated words, to upper case.
@@ -21,7 +21,10 @@ import { toString } from "../lang/toString.ts"
  * // => 'FOO BAR'
  */
 export function upperCase(string: string): string {
-  return words(toString(string).replace(/['\u2019]/g, '')).reduce((result, word, index) => (
-    result + (index ? ' ' : '') + word.toUpperCase()
-  ), '')
+  return words(toString(string).replace(/['\u2019]/g, "")).reduce(
+    (result, word, index) => (
+      result + (index ? " " : "") + word.toUpperCase()
+    ),
+    "",
+  );
 }

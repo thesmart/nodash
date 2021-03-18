@@ -1,5 +1,5 @@
-import { words } from "./words.ts"
-import { caseFirst } from "./_caseFirst.ts"
+import { words } from "./words.ts";
+import { caseFirst } from "./_caseFirst.ts";
 
 /**
  * Converts `string` to
@@ -22,9 +22,12 @@ import { caseFirst } from "./_caseFirst.ts"
  * // => 'FOO BAR'
  */
 export function startCase(string: string): string {
-  return words(`${string}`.replace(/['\u2019]/g, '')).reduce((result, word, index) => (
-    result + (index ? ' ' : '') + caseFirst(word, "toUpperCase")
-  ), '')
+  return words(`${string}`.replace(/['\u2019]/g, "")).reduce(
+    (result, word, index) => (
+      result + (index ? " " : "") + caseFirst(word, "toUpperCase")
+    ),
+    "",
+  );
 }
 
 /**
@@ -47,5 +50,5 @@ export function startCase(string: string): string {
  * // => 'FOO BAR'
  */
 export function titleCase(string: string): string {
-  return startCase(string)
+  return startCase(string);
 }

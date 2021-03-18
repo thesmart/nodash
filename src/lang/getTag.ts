@@ -1,4 +1,4 @@
-import { nullTag, undefinedTag } from "./consts.ts"
+import { nullTag, undefinedTag } from "./consts.ts";
 
 /**
  * Gets the `toStringTag` of `value`.
@@ -8,7 +8,7 @@ import { nullTag, undefinedTag } from "./consts.ts"
  */
 export function getTag(value: unknown): string {
   if (value == null) {
-    return value === undefined ? undefinedTag : nullTag
+    return value === undefined ? undefinedTag : nullTag;
   }
   return Object.prototype.toString.call(value);
 }

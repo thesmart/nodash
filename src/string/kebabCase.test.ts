@@ -1,4 +1,4 @@
-import { testCaseMethods } from "./_caseMethodsTests.ts"
-import { kebabCase } from "./kebabCase.ts"
+import { testCaseMethods } from "./_caseMethodsTests.ts";
+import { kebabCase } from "./kebabCase.ts";
 
-testCaseMethods(kebabCase)
+testCaseMethods(kebabCase);

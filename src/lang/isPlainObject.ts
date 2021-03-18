@@ -1,9 +1,9 @@
-import { getTag } from './getTag.ts'
-import { objectTag } from "./consts.ts"
-import { isObjectLike } from './isObjectLike.ts'
+import { getTag } from "./getTag.ts";
+import { objectTag } from "./consts.ts";
+import { isObjectLike } from "./isObjectLike.ts";
 
 /** Used to infer the `Object` constructor. */
-const objectCtorString = Function.prototype.toString.call(Object)
+const objectCtorString = Function.prototype.toString.call(Object);
 
 /**
  * Checks if `value` is a plain object, that is, an object created by the
@@ -33,13 +33,14 @@ const objectCtorString = Function.prototype.toString.call(Object)
  */
 export function isPlainObject(value: unknown): boolean {
   if (!isObjectLike(value) || getTag(value) != objectTag) {
-    return false
+    return false;
   }
   const proto = Object.getPrototypeOf(value);
   if (proto === null) {
-    return true
+    return true;
   }
-  const Ctor = Object.prototype.hasOwnProperty.call(proto, 'constructor') && proto.constructor
-  return typeof Ctor == 'function' && Ctor instanceof Ctor &&
-    Function.prototype.toString.call(Ctor) == objectCtorString
+  const Ctor = Object.prototype.hasOwnProperty.call(proto, "constructor") &&
+    proto.constructor;
+  return typeof Ctor == "function" && Ctor instanceof Ctor &&
+    Function.prototype.toString.call(Ctor) == objectCtorString;
 }

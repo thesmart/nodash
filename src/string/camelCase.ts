@@ -1,6 +1,6 @@
-import { words } from "./words.ts"
-import { toString } from "../lang/toString.ts"
-import { caseFirst } from "./_caseFirst.ts"
+import { words } from "./words.ts";
+import { toString } from "../lang/toString.ts";
+import { caseFirst } from "./_caseFirst.ts";
 
 /**
  * Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
@@ -22,8 +22,11 @@ import { caseFirst } from "./_caseFirst.ts"
  * // => 'fooBar'
  */
 export const camelCase = (string: string): string => (
-  words(toString(string).replace(/['\u2019]/g, '')).reduce((result, word, index) => {
-    word = word.toLowerCase()
-    return result + (index ? caseFirst(word, "toUpperCase") : word)
-  }, '')
-)
+  words(toString(string).replace(/['\u2019]/g, "")).reduce(
+    (result, word, index) => {
+      word = word.toLowerCase();
+      return result + (index ? caseFirst(word, "toUpperCase") : word);
+    },
+    "",
+  )
+);

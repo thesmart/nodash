@@ -1,6 +1,6 @@
-import { isLength } from './isLength.ts'
-import type { HasLength } from '../types.d.ts'
-import { isFunction } from "./isFunction.ts"
+import { isLength } from "./isLength.ts";
+import type { HasLength } from "../types.d.ts";
+import { isFunction } from "./isFunction.ts";
 
 /**
  * Checks if `value` is array-like. A value is considered array-like if it's
@@ -26,5 +26,6 @@ import { isFunction } from "./isFunction.ts"
  * // => false
  */
 export function isArrayLike(value: unknown): boolean {
-  return value != null && isLength((value as HasLength).length) && !isFunction(value)
+  return value != null && isLength((value as HasLength).length) &&
+    !isFunction(value);
 }

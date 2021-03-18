@@ -19,4 +19,4 @@
  * _.isArray(_.noop);
  * // => false
  */
-export const isArray = Array.isArray
+export const isArray = Array.isArray;

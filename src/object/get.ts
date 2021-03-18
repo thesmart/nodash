@@ -1,6 +1,6 @@
-import type { ObjectLiteral } from "../types.d.ts"
-import { stringToPath } from "./_stringToPath.ts"
-import { isUndefined } from "../lang/isUndefined.ts"
+import type { ObjectLiteral } from "../types.d.ts";
+import { stringToPath } from "./_stringToPath.ts";
+import { isUndefined } from "../lang/isUndefined.ts";
 
 /**
  * Gets the value at `path` of `object`. If the resolved value is
@@ -23,20 +23,24 @@ import { isUndefined } from "../lang/isUndefined.ts"
  * _.get(object, 'a.b.c', 'default');
  * // => 'default'
  */
-export function get<R>(object: ObjectLiteral | ArrayLike<unknown>, path: string, defaultValue?: R): typeof defaultValue {
-  if (object == null) { return defaultValue }
+export function get<R>(
+  object: ObjectLiteral | ArrayLike<unknown>,
+  path: string,
+  defaultValue?: R,
+): typeof defaultValue {
+  if (object == null) return defaultValue;
   const pathArr = stringToPath(path as string);
 
   // deno-lint-ignore no-explicit-any
-  let ptr: any = object
-  let index = 0
-  const length = pathArr.length
+  let ptr: any = object;
+  let index = 0;
+  const length = pathArr.length;
   while (ptr != null && index < length) {
-    ptr = ptr[pathArr[index++]]
+    ptr = ptr[pathArr[index++]];
   }
 
   if (index && index == length) {
-    return isUndefined(ptr) ? defaultValue : ptr
+    return isUndefined(ptr) ? defaultValue : ptr;
   }
-  return defaultValue
+  return defaultValue;
 }

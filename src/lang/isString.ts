@@ -1,7 +1,7 @@
-import { getTag } from './getTag.ts'
-import { isArray } from "./isArray.ts"
-import { isObjectLike } from "./isObjectLike.ts"
-import { stringTag } from "./consts.ts"
+import { getTag } from "./getTag.ts";
+import { isArray } from "./isArray.ts";
+import { isObjectLike } from "./isObjectLike.ts";
+import { stringTag } from "./consts.ts";
 
 /**
  * Checks if `value` is classified as a `String` primitive or object.
@@ -19,6 +19,6 @@ import { stringTag } from "./consts.ts"
  * // => false
  */
 export function isString(value: unknown): boolean {
-  return typeof value == 'string' ||
-    (!isArray(value) && isObjectLike(value) && getTag(value) == stringTag)
+  return typeof value == "string" ||
+    (!isArray(value) && isObjectLike(value) && getTag(value) == stringTag);
 }

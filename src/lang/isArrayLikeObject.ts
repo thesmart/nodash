@@ -1,5 +1,5 @@
-import { isObjectLike } from "./isObjectLike.ts"
-import { isArrayLike } from "./isArrayLike.ts"
+import { isObjectLike } from "./isObjectLike.ts";
+import { isArrayLike } from "./isArrayLike.ts";
 
 /**
  * This method is like `_.isArrayLike` except that it also checks if `value`
@@ -25,5 +25,5 @@ import { isArrayLike } from "./isArrayLike.ts"
  * // => false
  */
 export function isArrayLikeObject(value: unknown): boolean {
-  return isObjectLike(value) && isArrayLike(value)
+  return isObjectLike(value) && isArrayLike(value);
 }

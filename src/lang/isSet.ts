@@ -1,6 +1,6 @@
-import { getTag } from './getTag.ts'
-import { setTag } from './consts.ts'
-import { isObjectLike } from './isObjectLike.ts'
+import { getTag } from "./getTag.ts";
+import { setTag } from "./consts.ts";
+import { isObjectLike } from "./isObjectLike.ts";
 
 /**
  * Checks if `value` is classified as a `Set` object.

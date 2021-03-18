@@ -1,6 +1,6 @@
-import { getTag } from './getTag.ts'
-import { isObjectLike } from './isObjectLike.ts'
-import { argsTag } from "./consts.ts"
+import { getTag } from "./getTag.ts";
+import { isObjectLike } from "./isObjectLike.ts";
+import { argsTag } from "./consts.ts";
 
 /**
  * Checks if `value` is likely an `arguments` object.
@@ -18,5 +18,5 @@ import { argsTag } from "./consts.ts"
  * // => false
  */
 export function isArguments(value: unknown): boolean {
-  return isObjectLike(value) && getTag(value) == argsTag
+  return isObjectLike(value) && getTag(value) == argsTag;
 }

@@ -1,6 +1,6 @@
-import { getTag } from './getTag.ts'
-import { isObjectLike } from "./isObjectLike.ts"
-import { symbolTag } from "./consts.ts"
+import { getTag } from "./getTag.ts";
+import { isObjectLike } from "./isObjectLike.ts";
+import { symbolTag } from "./consts.ts";
 
 /**
  * Checks if `value` is classified as a `Symbol` primitive or object.
@@ -18,6 +18,6 @@ import { symbolTag } from "./consts.ts"
  * // => false
  */
 export function isSymbol(value: unknown): boolean {
-  return typeof value == 'symbol' ||
-    (isObjectLike(value) && getTag(value) == symbolTag)
+  return typeof value == "symbol" ||
+    (isObjectLike(value) && getTag(value) == symbolTag);
 }

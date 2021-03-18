@@ -1,6 +1,6 @@
-import { getTag } from './getTag.ts'
-import { isObjectLike } from './isObjectLike.ts'
-import { numberTag } from "./consts.ts"
+import { getTag } from "./getTag.ts";
+import { isObjectLike } from "./isObjectLike.ts";
+import { numberTag } from "./consts.ts";
 
 /**
  * Checks if `value` is classified as a `Number` primitive or object.
@@ -28,6 +28,6 @@ import { numberTag } from "./consts.ts"
  * // => false
  */
 export function isNumber(value: unknown): boolean {
-  return typeof value === 'number' ||
-    (isObjectLike(value) && getTag(value) == numberTag)
+  return typeof value === "number" ||
+    (isObjectLike(value) && getTag(value) == numberTag);
 }

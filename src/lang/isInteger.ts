@@ -1,4 +1,4 @@
-import { toInteger } from "./toInteger.ts"
+import { toInteger } from "./toInteger.ts";
 
 /**
  * Checks if `value` is an integer.
@@ -25,5 +25,5 @@ import { toInteger } from "./toInteger.ts"
  * // => false
  */
 export function isInteger(value: unknown): boolean {
-  return typeof value == 'number' && value == toInteger(value)
+  return typeof value == "number" && value == toInteger(value);
 }

@@ -26,5 +26,5 @@
  * // => false
  */
 export function isFunction(value: unknown): boolean {
-  return typeof value === 'function'
+  return typeof value === "function";
 }

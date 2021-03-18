@@ -3,15 +3,15 @@ export interface ObjectLiteral {
 }
 
 export interface HasLength {
-  length: number
+  length: number;
 }
 
 export interface HasSize {
-  size: number
+  size: number;
 }
 
 export interface HasConstructor<T = unknown> {
-  new (): T
+  new (): T;
 }
 
 interface IteratorYieldResult<TYield> {
@@ -24,7 +24,9 @@ interface IteratorReturnResult<TReturn> {
   value: TReturn;
 }
 
-export type IteratorResult<T, TReturn = any> = IteratorYieldResult<T> | IteratorReturnResult<TReturn>;
+export type IteratorResult<T, TReturn = any> =
+  | IteratorYieldResult<T>
+  | IteratorReturnResult<TReturn>;
 
 export interface Iterator<T, TReturn = any, TNext = undefined> {
   // NOTE: 'next' is defined using a tuple to ensure we report the correct assignability errors in all places.

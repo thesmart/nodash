@@ -1,5 +1,5 @@
-import { toString } from "../lang/toString.ts"
-import { words } from "./words.ts"
+import { toString } from "../lang/toString.ts";
+import { words } from "./words.ts";
 
 /**
  * Converts `string` to
@@ -25,7 +25,10 @@ import { words } from "./words.ts"
  * // => 'foo_2_bar'
  */
 export function snakeCase(string: string): string {
-  return words(toString(string).replace(/['\u2019]/g, '')).reduce((result, word, index) => (
-    result + (index ? '_' : '') + word.toLowerCase()
-  ), '')
+  return words(toString(string).replace(/['\u2019]/g, "")).reduce(
+    (result, word, index) => (
+      result + (index ? "_" : "") + word.toLowerCase()
+    ),
+    "",
+  );
 }

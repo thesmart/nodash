@@ -1,10 +1,14 @@
-import { debounce, DebouncableFunction, DebouncedFunction } from './debounce.ts'
-import { isObject } from '../lang/isObject.ts'
-import { isFunction } from "../lang/isFunction.ts"
+import {
+  DebouncableFunction,
+  debounce,
+  DebouncedFunction,
+} from "./debounce.ts";
+import { isObject } from "../lang/isObject.ts";
+import { isFunction } from "../lang/isFunction.ts";
 
 export interface ThrottleOptions {
-  leading?: boolean
-  trailing?: boolean
+  leading?: boolean;
+  trailing?: boolean;
 }
 
 /**
@@ -58,21 +62,21 @@ export interface ThrottleOptions {
 export function throttle<A extends Array<any>, R>(
   func: DebouncableFunction<A, R>,
   wait: number = 0,
-  options: ThrottleOptions = {}
+  options: ThrottleOptions = {},
 ): DebouncedFunction<A, R> {
-  let leading = true
-  let trailing = true
+  let leading = true;
+  let trailing = true;
 
-  if (typeof func !== 'function') {
-    throw new TypeError('Expected a function')
+  if (!isFunction(func)) {
+    throw new TypeError("Expected a function");
   }
   if (isObject(options)) {
-    leading = 'leading' in options ? !!options.leading : leading
-    trailing = 'trailing' in options ? !!options.trailing : trailing
+    leading = "leading" in options ? !!options.leading : leading;
+    trailing = "trailing" in options ? !!options.trailing : trailing;
   }
   return debounce(func, wait, {
     leading,
     trailing,
-    'maxWait': wait
-  })
+    "maxWait": wait,
+  });
 }

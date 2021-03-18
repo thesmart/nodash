@@ -1,13 +1,13 @@
-import { getTag } from './getTag.ts'
-import { isArguments } from './isArguments.ts'
-import { isArrayLike } from './isArrayLike.ts'
-import { isPrototype } from './isPrototype.ts'
-import { isTypedArray } from './isTypedArray.ts'
-import type { HasLength, HasSize, Iterable } from '../types.d.ts'
-import { mapTag, setTag } from "./consts.ts"
+import { getTag } from "./getTag.ts";
+import { isArguments } from "./isArguments.ts";
+import { isArrayLike } from "./isArrayLike.ts";
+import { isPrototype } from "./isPrototype.ts";
+import { isTypedArray } from "./isTypedArray.ts";
+import type { HasLength, HasSize, Iterable } from "../types.d.ts";
+import { mapTag, setTag } from "./consts.ts";
 
 /** Used to check objects for own properties. */
-const hasOwnProperty = Object.prototype.hasOwnProperty
+const hasOwnProperty = Object.prototype.hasOwnProperty;
 
 /**
  * Checks if `value` is an empty object, collection, map, or set.
@@ -45,24 +45,26 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
  */
 export function isEmpty(value: unknown): boolean {
   if (value == null) {
-    return true
+    return true;
   }
-  if (isArrayLike(value) &&
-      (Array.isArray(value) || typeof value === 'string'
-        || isTypedArray(value) || isArguments(value))) {
-    return !(value as HasLength).length
+  if (
+    isArrayLike(value) &&
+    (Array.isArray(value) || typeof value === "string" ||
+      isTypedArray(value) || isArguments(value))
+  ) {
+    return !(value as HasLength).length;
   }
-  const tag = getTag(value)
+  const tag = getTag(value);
   if (tag == mapTag || tag == setTag) {
-    return !(value as HasSize).size
+    return !(value as HasSize).size;
   }
   if (isPrototype(value)) {
-    return !Object.keys(value as object).length
+    return !Object.keys(value as object).length;
   }
   for (const key in (value as Iterable<unknown>)) {
     if (hasOwnProperty.call(value, key)) {
-      return false
+      return false;
     }
   }
-  return true
+  return true;
 }

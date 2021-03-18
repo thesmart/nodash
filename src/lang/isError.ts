@@ -1,6 +1,6 @@
-import { getTag } from './getTag.ts'
-import { isObjectLike } from './isObjectLike.ts'
-import { domExcTag, errorTag } from "./consts.ts"
+import { getTag } from "./getTag.ts";
+import { isObjectLike } from "./isObjectLike.ts";
+import { domExcTag, errorTag } from "./consts.ts";
 
 /**
  * Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
@@ -24,9 +24,9 @@ export function isError(value: unknown) {
   }
 
   if (!isObjectLike(value)) {
-    return false
+    return false;
   }
 
-  const tag = getTag(value)
+  const tag = getTag(value);
   return tag == errorTag || tag == domExcTag;
 }

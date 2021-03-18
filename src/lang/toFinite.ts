@@ -1,5 +1,5 @@
-import { toNumber } from "./toNumber.ts"
-import { INFINITY, MAX_INTEGER } from "./consts.ts"
+import { toNumber } from "./toNumber.ts";
+import { INFINITY, MAX_INTEGER } from "./consts.ts";
 
 /**
  * Converts `value` to a finite number.

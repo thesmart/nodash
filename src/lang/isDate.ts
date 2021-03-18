@@ -1,6 +1,6 @@
-import { getTag } from './getTag.ts'
-import { isObjectLike } from './isObjectLike.ts'
-import { dateTag } from "./consts.ts"
+import { getTag } from "./getTag.ts";
+import { isObjectLike } from "./isObjectLike.ts";
+import { dateTag } from "./consts.ts";
 
 /**
  * Checks if `value` is classified as a `Date` object.

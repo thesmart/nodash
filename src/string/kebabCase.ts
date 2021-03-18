@@ -1,5 +1,5 @@
-import { words } from "./words.ts"
-import { toString } from "../lang/toString.ts"
+import { words } from "./words.ts";
+import { toString } from "../lang/toString.ts";
 
 /**
  * Converts `string` to
@@ -22,7 +22,10 @@ import { toString } from "../lang/toString.ts"
  * // => 'foo-bar'
  */
 export const kebabCase = (string: string) => (
-  words(toString(string).replace(/['\u2019]/g, '')).reduce((result, word, index) => (
-    result + (index ? '-' : '') + word.toLowerCase()
-  ), '')
-)
+  words(toString(string).replace(/['\u2019]/g, "")).reduce(
+    (result, word, index) => (
+      result + (index ? "-" : "") + word.toLowerCase()
+    ),
+    "",
+  )
+);

@@ -1,5 +1,5 @@
-import { caseFirst } from "./_caseFirst.ts"
-import { toString } from "../lang/toString.ts"
+import { caseFirst } from "./_caseFirst.ts";
+import { toString } from "../lang/toString.ts";
 
 /**
  * Converts the first character of `string` to upper case and the remaining
@@ -14,4 +14,5 @@ import { toString } from "../lang/toString.ts"
  * capitalize('FRED')
  * // => 'Fred'
  */
-export const capitalize = (string: string = "") => caseFirst(toString(string).toLowerCase(), "toUpperCase")
+export const capitalize = (string: string = "") =>
+  caseFirst(toString(string).toLowerCase(), "toUpperCase");

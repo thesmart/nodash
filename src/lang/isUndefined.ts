@@ -14,5 +14,5 @@
  * // => false
  */
 export function isUndefined(value?: unknown): boolean {
-  return value === undefined
+  return value === undefined;
 }

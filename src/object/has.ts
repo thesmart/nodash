@@ -1,7 +1,7 @@
-import type { ObjectLiteral } from "../types.d.ts"
-import { stringToPath } from "./_stringToPath.ts"
-import { isArray } from "../lang/isArray.ts"
-import { isArguments } from "../lang/isArguments.ts"
+import type { ObjectLiteral } from "../types.d.ts";
+import { stringToPath } from "./_stringToPath.ts";
+import { isArray } from "../lang/isArray.ts";
+import { isArguments } from "../lang/isArguments.ts";
 
 /**
  * Checks if `path` is a direct property of `object`.
@@ -22,27 +22,30 @@ import { isArguments } from "../lang/isArguments.ts"
  * _.has(object, 'a.b');
  * // => true
  */
-export function has(object: ObjectLiteral | ArrayLike<unknown>, path: string): boolean {
-  if (object == null) { return false }
+export function has(
+  object: ObjectLiteral | ArrayLike<unknown>,
+  path: string,
+): boolean {
+  if (object == null) return false;
   const pathArr = stringToPath(path as string);
 
   // deno-lint-ignore no-explicit-any
-  let ptr: any = object
-  let index = 0
-  const length = pathArr.length
-  let hit = true
+  let ptr: any = object;
+  let index = 0;
+  const length = pathArr.length;
+  let hit = true;
   while (hit && ptr != null && index < length) {
-    hit = Object.prototype.hasOwnProperty.call(ptr, pathArr[index])
+    hit = Object.prototype.hasOwnProperty.call(ptr, pathArr[index]);
     if (!hit) {
       if ((isArray(ptr) || isArguments(ptr)) && ptr[pathArr[index]] == null) {
         // special case for sparse arrays
-        hit = true
+        hit = true;
       } else {
-        break
+        break;
       }
     }
-    ptr = ptr[pathArr[index++]]
+    ptr = ptr[pathArr[index++]];
   }
 
-  return !!index && index == length && hit
+  return !!index && index == length && hit;
 }

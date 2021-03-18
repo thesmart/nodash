@@ -1,9 +1,9 @@
-import { isSymbol } from './isSymbol.ts'
-import { toNumber } from "./toNumber.ts"
-import { isNumber } from "./isNumber.ts"
+import { isSymbol } from "./isSymbol.ts";
+import { toNumber } from "./toNumber.ts";
+import { isNumber } from "./isNumber.ts";
 
 /** Used as references for various `Number` constants. */
-export const INFINITY = 1 / 0
+export const INFINITY = 1 / 0;
 
 /**
  * Converts `value` to a string. An empty string is returned for `null`
@@ -26,19 +26,21 @@ export const INFINITY = 1 / 0
  */
 export function toString(value: unknown): string {
   if (value == null) {
-    return ''
+    return "";
   }
   // Exit early for strings to avoid a performance hit in some environments.
-  if (typeof value === 'string') {
-    return value
+  if (typeof value === "string") {
+    return value;
   }
   if (Array.isArray(value)) {
     // Recursively convert values (susceptible to call stack limits).
-    return `${value.map((other) => other == null ? other : toString(other))}`
+    return `${value.map((other) => other == null ? other : toString(other))}`;
   }
   if (isSymbol(value)) {
-    return (value as symbol).toString()
+    return (value as symbol).toString();
   }
-  const result = String(value)
-  return (result == '0' && (1 / (value as number)) == -INFINITY) ? '-0' : result
+  const result = String(value);
+  return (result == "0" && (1 / (value as number)) == -INFINITY)
+    ? "-0"
+    : result;
 }

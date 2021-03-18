@@ -1,6 +1,6 @@
-import { isObjectLike } from "./isObjectLike.ts"
-import { getTag } from "./getTag.ts"
-import { weakMapTag } from "./consts.ts"
+import { isObjectLike } from "./isObjectLike.ts";
+import { getTag } from "./getTag.ts";
+import { weakMapTag } from "./consts.ts";
 
 /**
  * Checks if `value` is classified as a `WeakMap` object.
@@ -18,5 +18,5 @@ import { weakMapTag } from "./consts.ts"
  * // => false
  */
 export function isWeakMap(value: unknown): boolean {
-  return isObjectLike(value) && getTag(value) == weakMapTag
+  return isObjectLike(value) && getTag(value) == weakMapTag;
 }

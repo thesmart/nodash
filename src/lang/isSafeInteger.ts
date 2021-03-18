@@ -1,5 +1,5 @@
-import { isInteger } from "./isInteger.ts"
-import { MAX_SAFE_INTEGER } from "./consts.ts"
+import { isInteger } from "./isInteger.ts";
+import { MAX_SAFE_INTEGER } from "./consts.ts";
 
 /**
  * Checks if `value` is a safe integer. An integer is safe if it's an IEEE-754
@@ -27,5 +27,6 @@ import { MAX_SAFE_INTEGER } from "./consts.ts"
  * // => false
  */
 export function isSafeInteger(value: unknown): boolean {
-  return isInteger(value) && (value as number) >= -MAX_SAFE_INTEGER && (value as number) <= MAX_SAFE_INTEGER
+  return isInteger(value) && (value as number) >= -MAX_SAFE_INTEGER &&
+    (value as number) <= MAX_SAFE_INTEGER;
 }

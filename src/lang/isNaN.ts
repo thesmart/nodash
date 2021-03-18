@@ -1,5 +1,5 @@
-import { isNumber } from "./isNumber.ts"
-import { isUndefined } from "./isUndefined.ts"
+import { isNumber } from "./isNumber.ts";
+import { isUndefined } from "./isUndefined.ts";
 
 /**
  * Checks if `value` is `NaN`.
