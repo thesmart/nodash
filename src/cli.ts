@@ -68,7 +68,7 @@ if (ARGS["update-mod"]) {
   console.info("Look for `@exports` tags in:", path.join("/"));
 
   const modExports: Record<string, Record<string, string>> = {};
-  let directories = Array.from(Deno.readDirSync(path.join("/"))).filter((
+  const directories = Array.from(Deno.readDirSync(path.join("/"))).filter((
     entry,
   ) => entry.isDirectory);
   for (const entry of directories) {
@@ -77,7 +77,7 @@ if (ARGS["update-mod"]) {
     path.push(moduleName);
     const tsFiles = Array.from(Deno.readDirSync(path.join("/")))
       .filter((entry) => entry.isFile && /^[^.]+\.ts$/.test(entry.name));
-    for (let entry of tsFiles) {
+    for (const entry of tsFiles) {
       path.push(entry.name);
       console.info("\t...", path.join("/"));
       const contents = readFileSync(path.join("/"));
