@@ -1,3 +1,7 @@
+// Function
+export { debounce } from "./function/debounce.ts"
+export { throttle } from "./function/throttle.ts"
+// Lang
 export { getTag } from './lang/getTag.ts'
 export { isArguments } from './lang/isArguments.ts'
 export { isArray } from './lang/isArray.ts'
@@ -32,3 +36,17 @@ export { toInteger } from './lang/toInteger.ts'
 export { toNumber } from './lang/toNumber.ts'
 export { toSafeInteger } from './lang/toSafeInteger.ts'
 export { toString } from './lang/toString.ts'
+// Object
+export { get } from "./object/get.ts"
+export { has } from "./object/has.ts"
+export { toPath } from "./object/toPath.ts"
+// String
+export { camelCase } from "./string/camelCase.ts"
+export { capitalize } from "./string/capitalize.ts"
+export { deburr } from "./string/deburr.ts"
+export { kebabCase } from "./string/kebabCase.ts"
+export { lowerCase } from "./string/lowerCase.ts"
+export { snakeCase } from "./string/snakeCase.ts"
+export { startCase, titleCase } from "./string/startCase.ts"
+export { upperCase } from "./string/upperCase.ts"
+export { words } from "./string/words.ts"
